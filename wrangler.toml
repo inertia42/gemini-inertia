@@ -1,0 +1,20 @@
+# wrangler.toml
+name = "gemini-inertia"
+main = "worker/src/index.ts"
+compatibility_date = "2025-03-27"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+binding = "ASSETS"
+directory = "public"
+
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "GEMINI_KEYS_KV"
+id = "144848930c5944ff921839b44d3d9c20"
+
+[[kv_namespaces]]
+binding = "WORKER_CONFIG_KV"
+id = "144848930c5944ff921839b44d3d9c20"
